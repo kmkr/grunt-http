@@ -53,7 +53,7 @@ module.exports = function (grunt) {
     }
 
     if (data.sourceFile) {
-      data.body = grunt.file.read(data.sourceFile);
+      data.body = grunt.file.read(data.sourceFile.path || data.sourceFile, data.sourceFile.encoding || "utf-8");
     }
 
     grunt.log.subhead('Request');
