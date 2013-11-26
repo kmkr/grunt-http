@@ -56,8 +56,10 @@ module.exports = function (grunt) {
       data.body = grunt.file.read(data.sourceFile.path || data.sourceFile, data.sourceFile.encoding || "utf-8");
     }
 
-    grunt.log.subhead('Request');
-    grunt.log.writeln(JSON.stringify(data, null, 2));
+    if (!data.silent) {
+      grunt.log.subhead('Request');
+      grunt.log.writeln(JSON.stringify(data, null, 2));
+    }
 
     request(data, responseHandler(done, dest, data.ignoreErrors));
 

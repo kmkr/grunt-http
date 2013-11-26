@@ -62,6 +62,7 @@ grunt.initConfig({
 - `httpSignature` - Options for the HTTP Signature Scheme using Joyent's library. The keyId and key properties must be specified. See the docs for other options.
 - `localAddress` - Local interface to bind for network connections.
 - `ignoreErrors` - Ignore the status code returned (if any).
+- `silent` - Avoid printing the request
 
 ### Usage Examples
 
